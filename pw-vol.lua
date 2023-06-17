@@ -28,26 +28,26 @@
 ]]--
 
 function os.capture(cmd, raw)
-  local f = assert(io.popen(cmd, 'r'))
-  local s = assert(f:read('*a'))
-  f:close()
-  if raw then return s end
-  s = string.gsub(s, '^%s+', '')
-  s = string.gsub(s, '%s+$', '')
-  s = string.gsub(s, '[\n\r]+', ' ')
-  return s
+    local f = assert(io.popen(cmd, 'r'))
+    local s = assert(f:read('*a'))
+    f:close()
+    if raw then return s end
+    s = string.gsub(s, '^%s+', '')
+    s = string.gsub(s, '%s+$', '')
+    s = string.gsub(s, '[\n\r]+', ' ')
+    return s
 end
 
 if #arg == 0 then
-        print "Cor van Wandelen 6-2023 - pw-vol adjust Pipewire volume"
-        print "Usage: "
-        print "pw-vol 100%    sets volume to 100%"
-        print "pw-vol 0%      sets volume to 0%"
-        print "pw-vol reverse reverses volume level: 0%-100% 100%-0% 50%-50% 25%-75% 75%-25% etc"
-        print "pw-vol toggle  toggles volume level"
-        print "pw-vol +       increases volume 5%"
-        print "pw-vol -       decreases volume 5%"
-        os.exit ()
+    print "Cor van Wandelen 6-2023 - pw-vol adjust Pipewire volume"
+    print "Usage: "
+    print "pw-vol 100%    sets volume to 100%"
+    print "pw-vol 0%      sets volume to 0%"
+    print "pw-vol reverse reverses volume level: 0%-100% 100%-0% 50%-50% 25%-75% 75%-25% etc"
+    print "pw-vol toggle  toggles volume level"
+    print "pw-vol +       increases volume 5%"
+    print "pw-vol -       decreases volume 5%"
+    os.exit ()
 end
 
 vol = tonumber(os.capture("wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -d' ' -f2 | xargs", true))
