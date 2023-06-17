@@ -1,8 +1,7 @@
 # pw-vol
 Lua script to set the volume of Pipewire on the command line<br>
 <br>
-how to install:<br>
-execute as root:<br>
+To install, execute as root:<br>
 ```
 cp pw-vol.lua /usr/bin<br>
 chmod +x /usr/bin/pw-vol.lua<br>
