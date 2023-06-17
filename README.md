@@ -9,7 +9,8 @@ ln -s /usr/bin/pw-vol.lua /usr/bin/pw-vol<br>
 ``` 
 <br>
 Usage: <br>
-```
+
+``` 
 pw-vol 100%    sets volume to 100%<br>
 pw-vol 0%      sets volume to 0%<br>
 pw-vol reverse reverses volume level: 0%-100% 100%-0% 50%-50% 25%-75% 75%-25% etc<br>
