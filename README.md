@@ -1,5 +1,6 @@
 # pw-vol
-Lua script to set the volume of Pipewire on the command line
+Lua script to set the volume of Pipewire on the command line<br>
+<br>
 <br>
 Usage: <br>
 pw-vol 100%    sets volume to 100%<br>
